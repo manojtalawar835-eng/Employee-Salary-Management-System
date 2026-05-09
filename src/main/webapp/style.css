@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#dbeafe,#ede9fe);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.container{
+    width:95%;
+    max-width:1300px;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= HEADER ================= */
+
+.header{
+    background: linear-gradient(135deg,#4f46e5,#9333ea);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.header h1{
+    font-size:52px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.header p{
+    font-size:20px;
+    opacity:0.9;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    background:#ffffff;
+    padding:22px;
+    border-bottom:1px solid #e5e7eb;
+    flex-wrap:wrap;
+}
+
+.nav-btn{
+    text-decoration:none;
+    color:#374151;
+    font-size:17px;
+    font-weight:600;
+    padding:12px 22px;
+    border-radius:12px;
+    transition:0.3s ease;
+}
+
+.nav-btn:hover{
+    background:#eef2ff;
+    color:#4f46e5;
+    transform:translateY(-3px);
+}
+
+/* ================= MAIN CONTENT ================= */
+
+.content{
+    padding:50px;
+}
+
+.welcome-text{
+    margin-bottom:45px;
+}
+
+.welcome-text h2{
+    font-size:42px;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.welcome-text p{
+    color:#6b7280;
+    font-size:18px;
+}
+
+/* ================= CARD SECTION ================= */
+
+.card-view{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card-link{
+    text-decoration:none;
+}
+
+.employee-card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.35s ease;
+    border:1px solid #f1f5f9;
+    position:relative;
+    overflow:hidden;
+}
+
+.employee-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(135deg,#4f46e5,#9333ea);
+}
+
+.employee-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 35px rgba(79,70,229,0.18);
+}
+
+.card-icon{
+    font-size:45px;
+    display:inline-block;
+    margin-bottom:20px;
+}
+
+.employee-card h3{
+    font-size:26px;
+    color:#111827;
+    margin-bottom:15px;
+}
+
+.employee-card p{
+    color:#6b7280;
+    line-height:1.7;
+    font-size:16px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    .header h1{
+        font-size:34px;
+    }
+
+    .header p{
+        font-size:16px;
+    }
+
+    .content{
+        padding:25px;
+    }
+
+    .welcome-text h2{
+        font-size:30px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .nav-btn{
+        width:90%;
+        text-align:center;
+    }
+}
